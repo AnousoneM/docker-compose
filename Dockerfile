@@ -13,8 +13,14 @@ RUN if ! php -m | grep -i xdebug; then \
       echo "Xdebug déjà installé, on passe."; \
     fi
 
+# Fichier php.ini personnalisé (à créer dans ./php/conf/php.ini)
+COPY ./php/conf/php.ini /usr/local/etc/php/php.ini
+
 # Configuration de Xdebug (copie du fichier une seule fois)
 COPY ./php/conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 # Activation du mod_rewrite d'Apache
 RUN a2enmod rewrite
+
+
+

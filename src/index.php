@@ -1,3 +1,6 @@
-<?php 
-    echo 'Hello the World';
+<?php
+
+// affiche les informations des services activés / installés
+phpinfo()
+
 ?>
