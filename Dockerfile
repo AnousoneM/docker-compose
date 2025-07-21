@@ -21,6 +21,3 @@ COPY ./php/conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 # Activation du mod_rewrite d'Apache
 RUN a2enmod rewrite
-
-
-
