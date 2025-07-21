@@ -20,7 +20,9 @@ services:
       - app-network
 
   db:
-    image: mysql:8.0
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mysql
     container_name: mysql-db-training
     restart: always
     environment:
